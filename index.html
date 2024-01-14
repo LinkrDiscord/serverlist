@@ -44,19 +44,7 @@
 
     <script>
         setTimeout(function() {
-            // Get the page parameter from the URL
-            const page = window.location.pathname.split("/").pop() || "index";
-
-            // Define pages and their corresponding redirect URLs
-            const pages = {
-                "index": "https://sites.google.com/view/linkrdiscord/server-list",
-                "ts": "https://discord.gg/ts-community"
-                // Add more pages as needed
-            };
-
-            // Redirect to the corresponding URL based on the page parameter
-            const redirectURL = pages[page] || pages["index"];
-            window.location.href = redirectURL;
+            window.location.href = "https://sites.google.com/view/linkrdiscord/server-list";
         }, 5000);
     </script>
 </body>
