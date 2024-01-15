@@ -1,0 +1,77 @@
+<script>
+    setTimeout(async function() {
+        const page = window.location.pathname.split("/").pop() || "index";
+        
+        try {
+            // Fetch the HTML file for the page
+            const response = await fetch(`${page}.html`);
+
+            // Check if the file exists based on the response status
+            if (response.status !== 200) {
+                // Redirect to the custom 404 page if the file doesn't exist
+                window.location.href = "404.html";
+            }
+        } catch (error) {
+            // Handle errors (e.g., network issues)
+            console.error("Error checking page existence:", error);
+            // Redirect to the custom 404 page in case of an error
+            window.location.href = "404.html";
+        }
+
+        // Continue with the existing redirection logic after checking file existence
+        setTimeout(function() {
+            window.location.href = "https://sites.google.com/view/linkrdiscord/server-list";
+        }, 5000);
+    }, 0);
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <!-- Include Lobster font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f4f4f4;
+            background: url('https://i.imgur.com/618Eso4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            font-family: 'Lobster', cursive; /* Apply Lobster font */
+        }
+
+        .content {
+            position: absolute;
+            top: 50%; /* Position at the vertical center */
+            left: 0;
+            right: 0;
+            transform: translateY(-50%); /* Adjust for half of the content height */
+            text-align: center;
+        }
+
+        .message {
+            font-size: 48px; /* Larger text size */
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="message">
+            Redirecting You to your awesome new server 👀 🌐 <br>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://discord.gg/2vrVqThtPC";
+        }, 5000);
+    </script>
+</body>
+</html>
